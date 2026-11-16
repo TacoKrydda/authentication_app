@@ -23,6 +23,6 @@ export const authenticateToken = (
     next();
   } catch (error) {
     console.error("JWT-verifiering misslyckades:", error);
-    return res.status(403).json({ error: "Ogiltig eller utgången token." });
+    return res.status(401).json({ error: "Ogiltig eller utgången token." });
   }
 };
